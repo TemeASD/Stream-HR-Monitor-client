@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<widget xmlns="http://www.w3.org/ns/widgets" xmlns:tizen="http://tizen.org/ns/widgets" id="https://kyng.asuscomm.com" version="1.0.20" viewmodes="maximized">
+    <access origin="*" subdomains="true"></access>
+    <tizen:application id="Am4c4XBBqu.OBSHeartRateMonitor" package="Am4c4XBBqu" required_version="2.4.0"/>
+    <author href="https://github.com/TemeASD/Stream-HR-Monitor-server" email="temesus@hotmail.com">Teemu Pölkki</author>
+    <tizen:background-category value="background-network"/>
+    <tizen:background-category value="iot-communication"/>
+    <tizen:background-category value="sensor"/>
+    <content src="index.html"/>
+    <description>This is a companion app to the server side application. This app sends your heart rate to your PC, so you can show it off on your live streams! </description>
+    <feature name="http://tizen.org/feature/screen.size.all"/>
+    <feature name="http://tizen.org/feature/sensor.heart_rate_monitor"/>
+    <feature name="http://tizen.org/feature/network.internet"/>
+    <icon src="icon.png"/>
+    <license href="https://github.com/TemeASD/Stream-HR-Monitor-server/blob/main/LICENSE">MIT</license>
+    <name>STREAM-HR</name>
+    <tizen:privilege name="http://tizen.org/privilege/internet"/>
+    <tizen:privilege name="http://tizen.org/privilege/healthinfo"/>
+    <tizen:profile name="wearable"/>
+    <tizen:setting background-support="enable" encryption="disable" hwkey-event="enable"/>
+    <tizen:launch_screen ready_when="complete">
+   		<tizen:ls_default background_image="icon-splash.png" background_color="#25cbff" image="icon-splash.png" image_border="0px stretch"/>
+	</tizen:launch_screen>	
+</widget>

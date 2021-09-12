@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport"
+	content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+<meta charset="utf-8" />
+<meta name="description" content="HeartRateMonitor" />
+<title>Heart Rate Monitor</title>
+<link rel="stylesheet" href="lib/tau/wearable/theme/default/tau.css" />
+<link rel="stylesheet" media="all and (-tizen-geometric-shape: circle)"
+	href="lib/tau/wearable/theme/default/tau.circle.min.css" />
+<link rel="stylesheet" type="text/css" href="./css/style.css" />
+</head>
+
+<body>
+	<div class="ui-page ui-page-active" id="main">
+		<div class="ui-header">
+			<h2 class="ui-title" id="uiTitleEl">STREAM HR</h2>
+		</div>
+		<div class="ui-content">
+			<ul data-role="listview">
+				<li><a id="conStatus" href="#">WAITING</a></li>
+			</ul>
+			<div id="heart-rate-value"></div>
+			<div id="service-info">
+				<div>
+					<a href="#" id="hr-mon-start" class="ui-btn">START</a>
+				</div>
+				<div>
+					<a href="#" id="hr-mon-stop" class="ui-btn">STOP</a>
+				</div>
+				<div>
+            		<a href="#settings-popup" data-rel="popup" class="ui-btn">SETTINGS</a>
+				</div>				
+			</div>
+		</div>
+		<!-- <footer class="ui-footer ui-bottom-button">
+            <a href="#settings-popup" data-rel="popup" class="ui-btn">Settings</a>
+        </footer> -->
+
+		<div id="settings-popup" class="ui-popup">
+			<div class="ui-popup-content">
+        		<div class="info-text">Set the IP and Port of the target WebSocket</div>
+				<div id="settings-network">
+                	<div id="settings-ip-input">
+                    	<input id="ip-text-input" type="text">
+                	</div>
+				<div class="ui-popup-footer ui-side-button ui-grid-col-2">
+					<a id="cancel-popup-btn" href="#" class="ui-btn btn-icon-cancel"
+						data-rel="back">Cancel</a> <a id="ok-popup-btn"
+						href="#" class="ui-btn btn-icon-check" data-rel="back">OK</a>
+				</div>
+			</div>
+		</div>
+	</div>
+	</div>
+	
+	<div class="ui-page" id="info">
+		<div class="ui-header">
+			<h2 class="ui-title" id="ui-title">HRM Info</h2>
+		</div>
+		<div class="ui-content">
+			<div class="info-text">Try again. Clean the sensor, then attach
+				Gear snugly to top or under side of wrist, not against the bone. Be
+				still and quiet.</div>
+		</div>
+		<footer class="ui-footer ui-bottom-button">
+			<a id="info-back-btn" class="ui-btn">Back</a>
+		</footer>
+	</div>
+	<div class="ui-page" id="error">
+		<div class="ui-header">
+			<h2 class="ui-title" id="ui-title">ERROR</h2>
+		</div>
+		<div class="ui-content">
+			<div class="info-text">There was an error connecting to WebSocket. Please make sure that the IP and Port are correct and that the server app is running and has access to internet. Also make sure that the Watch is connected to your Smartphone and Smartphone to your WLAN.</div>
+		</div>
+		<footer class="ui-footer ui-bottom-button">
+			<a id="error-back-btn" class="ui-btn">Back</a>
+		</footer>
+	</div>
+	
+	<script src="./lib/tau/wearable/js/tau.js"></script>
+	<script src="./js/core/core.js" data-main="./js/app.js"></script>
+
+</body>
+</html>
