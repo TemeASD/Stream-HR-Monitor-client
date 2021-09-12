@@ -2,7 +2,7 @@
 <widget xmlns="http://www.w3.org/ns/widgets" xmlns:tizen="http://tizen.org/ns/widgets" id="https://kyng.asuscomm.com" version="1.0.20" viewmodes="maximized">
     <access origin="*" subdomains="true"></access>
     <tizen:application id="Am4c4XBBqu.OBSHeartRateMonitor" package="Am4c4XBBqu" required_version="2.4.0"/>
-    <author href="https://github.com/TemeASD/Stream-HR-Monitor-server" email="temesus@hotmail.com">Teemu Pölkki</author>
+    <author href="https://github.com/TemeASD/Stream-HR-Monitor-client" email="temesus@hotmail.com">Teemu Pölkki</author>
     <tizen:background-category value="background-network"/>
     <tizen:background-category value="iot-communication"/>
     <tizen:background-category value="sensor"/>
